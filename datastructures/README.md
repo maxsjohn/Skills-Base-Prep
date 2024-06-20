@@ -26,8 +26,8 @@
         - [ ] Problem1
         - [ ] Problem2
 
-- [ ] Heaps
-    - [ ] Theory
+- [ ] Heap
+    - [x] Theory
     - [ ] Applications
         - [ ] Problem1
         - [ ] Problem2
