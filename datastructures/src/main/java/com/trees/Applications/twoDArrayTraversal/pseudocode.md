@@ -38,18 +38,4 @@ visited = initialize 2D array of false with dimensions (number of rows x number 
 startRow = ... your starting row ...
 startCol = ... your starting col ...
 DFS(matrix, startRow, startCol, visited)
-
-
-
-## Explanation
-
-1. **DFS Function**: This function performs the DFS traversal from a given cell (`row`, `col`).
-    - **Base Case**: If the current cell is out of bounds or already visited, the function returns.
-    - **Mark Visited**: The current cell is marked as visited.
-    - **Process Cell**: The value of the current cell is processed (e.g., printed or stored).
-    - **Direction Vectors**: The `directions` 2D array is used to determine the next cells to visit in the order of up, right, down, and left.
-    - **Recursive Calls**: The function recursively explores all four directions using the `directions` array.
-
-2. **Initialization**: The `matrix` and `visited` array are initialized. The `DFS` function is called from a starting point.
-
-This pseudocode outlines the recursive approach for DFS traversal of a 2D matrix. You can translate this pseudocode into Java for implementation.
+```
