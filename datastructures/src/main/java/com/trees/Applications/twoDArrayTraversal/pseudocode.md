@@ -39,3 +39,40 @@ startRow = ... your starting row ...
 startCol = ... your starting col ...
 DFS(matrix, startRow, startCol, visited)
 ```
+
+
+## Pseudocode for BFS
+
+```plaintext
+
+    function BFS(matrix, startRow, startCol):
+    directions = [[-1, 0], [0, 1], [1, 0], [0, -1]]  # Directions for up, right, down, left
+    queue = empty queue
+    queue.enqueue([startRow, startCol])
+
+    visited = 2D array of false with dimensions [matrix.length][matrix[0].length]
+    visited[startRow][startCol] = true
+
+    while queue is not empty:
+        current = queue.dequeue()
+        row = current[0]
+        col = current[1]
+
+        process(matrix[row][col])  # Process the current cell
+
+        for each direction in directions:
+            newPos = [row + direction[0], col + direction[1]]
+
+            if newPos is within bounds of matrix and not visited[newPos[0]][newPos[1]]:
+                queue.enqueue(newPos)
+                visited[newPos[0]][newPos[1]] = true
+
+    function isInBounds(pos, matrix):
+    row = pos[0]
+    col = pos[1]
+    return row >= 0 and row < matrix.length and col >= 0 and col < matrix[0].length
+    
+    function process(value):
+    print value
+
+```
