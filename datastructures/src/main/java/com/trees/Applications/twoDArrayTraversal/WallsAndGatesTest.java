@@ -49,8 +49,8 @@ public class WallsAndGatesTest {
         };
         int[][] expected3 = {
                 {-1, 0, 1, -1},
-                {2, -1, 1, -1},
-                {3, -1, 0, -1},
+                {INF, -1, 1, -1},
+                {INF, -1, 0, -1},
                 {-1, 2, 1, -1}
         };
         wg.wallsAndGates(testCase3);
@@ -63,10 +63,10 @@ public class WallsAndGatesTest {
                 {INF, INF, INF, INF}
         };
         int[][] expected4 = {
-                {6, 5, 4, 3},
-                {5, -1, 3, 2},
+                {4, 3, 2, 3},
+                {5, -1, 1, 2},
                 {4, -1, 0, 1},
-                {5, 4, 3, 2}
+                {3, 2, 1, 2}
         };
         wg.wallsAndGates(testCase4);
         assertArrayEquals(expected4, testCase4);
@@ -176,7 +176,6 @@ public class WallsAndGatesTest {
         };
         wg.wallsAndGates(testCase10);
         assertArrayEquals(expected10, testCase10);
-
         int[][] testCase11 = {
                 {INF, INF, INF, INF},
                 {INF, INF, INF, INF},
@@ -233,8 +232,7 @@ public class WallsAndGatesTest {
         };
         int[][] expected15 = {
                 {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF},
-                {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF
-                },
+                {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF},
                 {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF},
                 {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF},
                 {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF},
@@ -246,6 +244,7 @@ public class WallsAndGatesTest {
         };
         wg.wallsAndGates(testCase15);
         assertArrayEquals(expected15, testCase15);
+
         // Additional test cases to cover all scenarios
 
         int[][] testCase16 = {
@@ -283,8 +282,8 @@ public class WallsAndGatesTest {
         int[][] expected18 = {
                 {3, 2, 1, 0},
                 {2, -1, 2, 1},
-                {3, 2, 2, 2},
-                {4, 3, 3, 3}
+                {3, 2, 3, 2},
+                {4, 3, 4, 3}
         };
         wg.wallsAndGates(testCase18);
         assertArrayEquals(expected18, testCase18);
@@ -299,7 +298,7 @@ public class WallsAndGatesTest {
         int[][] expected19 = {
                 {0, -1, 5, 4},
                 {1, 2, -1, 3},
-                {2, 1, 2, -1},
+                {2, 3, 2, -1},
                 {3, -1, 1, 2},
                 {4, 3, 2, 0}
         };
@@ -314,7 +313,7 @@ public class WallsAndGatesTest {
         int[][] expected20 = {
                 {1, 0, 1},
                 {-1, 1, 2},
-                {1, 2, 3}
+                {2, 2, 3}
         };
         wg.wallsAndGates(testCase20);
         assertArrayEquals(expected20, testCase20);
